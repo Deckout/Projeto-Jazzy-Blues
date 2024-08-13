@@ -6,13 +6,11 @@ public class SpawnDoc : MonoBehaviour
 {
     public GameObject documento; // O documento a ser spawnado
     public Transform targetPosition1; // O objeto invisível que será o destino do movimento quando spawnado e será o ponto original
-    public Transform targetPosition2; // O objeto invisível que será o segundo destino do movimento quando clicado
     public float vel = 10f; // Velocidade inicial do movimento
     public float desacelerando = 5f; // Taxa de desaceleração
 
     private GameObject spawnedDoc;
     private bool emMovimento = false;
-    private bool emMovimentoAlvo1 = true;
     private float velAtual; 
     private Transform currentTarget;
 
@@ -50,26 +48,5 @@ public class SpawnDoc : MonoBehaviour
                 velAtual = vel; //reseta a velocidade para o próximo movimento
             }
         }
-    }
-
-    void OnMouseDown()
-    {
-        Debug.Log("CLICK");
-        //impede que o objeto seja clicado enquanto está se movendo
-        if(spawnedDoc != null && emMovimento == true)
-        {
-            //alterna o alvo entre o primeiro e o segundo objetos invisíveis
-            if(emMovimentoAlvo1)
-            {
-                currentTarget = targetPosition2;
-            }
-        }
-        else
-        {
-            currentTarget = targetPosition1;
-        }
-
-        emMovimento = true;
-        emMovimentoAlvo1 = !emMovimentoAlvo1; //alterna o estado
     }
 }
