@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class SpawnDoc : MonoBehaviour
     public float vel = 10f; // Velocidade inicial do movimento
     public float desacelerando = 5f; // Taxa de desaceleração
     public bool deveDestruir = false;
+
+    public static event Action TriggerDoc;
 
     public int documentoOrdem = 1; //ordem dos documentos a serem spawnados
     private GameObject spawnedDoc;
@@ -35,7 +38,7 @@ public class SpawnDoc : MonoBehaviour
         if(spawnedDoc != null)
         {
             velAtual = vel;
-            currentTarget = targetPosition2;
+            currentTarget = transform;
             emMovimento = true;
             documentoOrdem++;
             deveDestruir = true;
@@ -79,7 +82,7 @@ public class SpawnDoc : MonoBehaviour
                 velAtual = vel; //reseta a velocidade para o próximo movimento
 
                 if(deveDestruir){
-                    Destroy(spawnedDoc);
+                    TriggerDoc?.Invoke();
                     spawnedDoc = null;
                 }
             }
