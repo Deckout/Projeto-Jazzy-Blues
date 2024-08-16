@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,14 @@ using UnityEngine.UI;
 
 public class SpawnNPC : MonoBehaviour
 {
-    public GameObject npc; //o npc que será spawnado
+    public GameObject npc1; //o npc1 que será spawnado
+    public GameObject npc2;
+    public GameObject npc3;
+
+
+    public int npcOrdem = 1; //a ordem dos npcs, começando pelo primeiro, aumenta em 1 sempre que o último é destruído
     public Transform targetPosition; //posição até onde o objeto deve se mover inicialmente
-    public Transform advancePosition; //posição mais adiante onde o npc irá se mover ao clicar no botão verde
+    public Transform advancePosition; //posição mais adiante onde o npc irá se mover ao clicar no botão verde ou vermelho
     public float vel = 10f; //velocidade de movimento inicial
     public float desacelerando = 5f; //taxa de desaceleração
 
@@ -16,10 +22,11 @@ public class SpawnNPC : MonoBehaviour
 
     public delegate void EmDestino();
     public static event EmDestino ChegouEmDestino;
+    public static event Action DespawnEvent;
 
     private GameObject npcSpawnado;
     private bool emMovimento = false;
-    private bool deveDestruir = false; // flag para indicar se o NPC deve ser destruído ao chegar ao destino
+    public static bool deveDestruir = false; // flag para indicar se o NPC deve ser destruído ao chegar ao destino
     private float velAtual;
     private Transform currentTarget; //posição alvo atual
 
@@ -28,15 +35,7 @@ public class SpawnNPC : MonoBehaviour
 
     void Start()
     {
-        //spawna o objeto no local do spawner
-        npcSpawnado = Instantiate(npc, transform.position, Quaternion.identity);
-        velAtual = vel; //define a velocidade inicial
-        emMovimento = true;
-        currentTarget = targetPosition; //inicialmente, o alvo é a posição de destino
-
-        //configura os botões
-        advanceButton.onClick.AddListener(ConfirmAdvance);
-        returnButton.onClick.AddListener(ConfirmReturn);
+        NPCSpawn();
     }
 
     void Update()
@@ -61,12 +60,44 @@ public class SpawnNPC : MonoBehaviour
                 // Destrói o NPC ao chegar ao destino
                 if (deveDestruir)
                 {
+                    DespawnEvent?.Invoke();
                     Destroy(npcSpawnado);
+                    npcOrdem++;
+                    NPCSpawn();
                     ResetButtons(); // Reseta os botões após a destruição do NPC
                 }
             }
         }
     }
+
+    void NPCSpawn()
+{
+    if (npcOrdem == 1)
+    {
+        npcSpawnado = Instantiate(npc1, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 2)
+    {
+        npcSpawnado = Instantiate(npc2, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 3)
+    {
+        npcSpawnado = Instantiate(npc3, transform.position, Quaternion.identity);
+    }
+
+    velAtual = vel;
+    emMovimento = true;
+    currentTarget = targetPosition;
+    deveDestruir = false;
+
+    // remove os listeners velhos
+    advanceButton.onClick.RemoveListener(ConfirmAdvance);
+    returnButton.onClick.RemoveListener(ConfirmReturn);
+
+    // adiciona novamente
+    advanceButton.onClick.AddListener(ConfirmAdvance);
+    returnButton.onClick.AddListener(ConfirmReturn);
+}
 
     // Função para confirmar a ação de mover o NPC para a posição avançada
     void ConfirmAdvance()
@@ -99,6 +130,7 @@ public class SpawnNPC : MonoBehaviour
         velAtual = vel; //reseta a velocidade
         emMovimento = true; //reinicia o movimento
         deveDestruir = true; //define que o NPC deve ser destruído ao chegar no destino
+
     }
 
     // Função para mover o NPC de volta para a posição de spawn

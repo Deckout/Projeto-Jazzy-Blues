@@ -202,6 +202,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47557814}
   m_CullTransparentMesh: 1
+--- !u!1 &226548657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226548658}
+  m_Layer: 0
+  m_Name: paradaDoc3
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &226548658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226548657}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 1.53, z: 0.03922163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1050076568}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &230183337
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +1001,7 @@ Transform:
   m_Children:
   - {fileID: 1829507536}
   - {fileID: 1204384584}
+  - {fileID: 226548658}
   m_Father: {fileID: 778388521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1050076569
@@ -984,10 +1016,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c75a78bb2555f4aa24b31462a7b02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  documento: {fileID: 4626420572903147938, guid: 3ec71cbe2ad54cb40a762cb2f1e9eee6, type: 3}
+  documento1: {fileID: 1379594028245495398, guid: 75d3a363bb3bc5c43a872d7d9633bb22, type: 3}
+  documento2: {fileID: 1705876210899925045, guid: 11221c456e701604f831d7d6f5b6a372, type: 3}
+  documento3: {fileID: 487464104461456621, guid: e93a0e6be505bd040aae906a2895552b, type: 3}
   targetPosition1: {fileID: 1829507536}
+  targetPosition2: {fileID: 226548658}
   vel: 5
   desacelerando: 0.2
+  deveDestruir: 0
+  documentoOrdem: 1
 --- !u!1 &1144667185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1543,7 +1580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c41ed2e69411240bf1cb47be7b699e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npc: {fileID: 8111748755929655707, guid: 51c8272e3d5706348823b5a913be7043, type: 3}
+  npc1: {fileID: 8111748755929655707, guid: 51c8272e3d5706348823b5a913be7043, type: 3}
+  npc2: {fileID: 6415896250417852792, guid: bb77d8947d7de1042bb7fb94f4e6bc62, type: 3}
+  npc3: {fileID: 34524601205146011, guid: 1cf77b32b85fa0b44af85e1018f7593f, type: 3}
+  npcOrdem: 1
   targetPosition: {fileID: 438760113}
   advancePosition: {fileID: 522913414}
   vel: 5
