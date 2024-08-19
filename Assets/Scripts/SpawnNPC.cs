@@ -23,6 +23,8 @@ public class SpawnNPC : MonoBehaviour
     public delegate void EmDestino();
     public static event EmDestino ChegouEmDestino;
     public static event Action DespawnEvent;
+    public static event Action NPCReturn; // evento que deve ser "invoked" dentro do script de return
+    public static event Action NPCAdvance; // evento que deve ser "invoked" dentro do script de advance
 
     private GameObject npcSpawnado;
     private bool emMovimento = false;
@@ -105,6 +107,7 @@ public class SpawnNPC : MonoBehaviour
         advanceClicks++; //incrementa o contador de cliques
         if (advanceClicks == 2) //verifica se já houve 2 cliques
         {
+            NPCAdvance?.Invoke();
             MoveToAdvancePosition();
             advanceClicks = 0; //reseta o contador
             returnButton.interactable = false; // Desativa o botão de retorno
@@ -117,6 +120,7 @@ public class SpawnNPC : MonoBehaviour
         returnClicks++; //incrementa o contador de cliques
         if (returnClicks == 2) //verifica se já houve 2 cliques
         {
+            NPCReturn?.Invoke();
             MoveToSpawnPosition();
             returnClicks = 0; //reseta o contador
             advanceButton.interactable = false; // Desativa o botão de avanço
