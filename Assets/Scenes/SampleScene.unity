@@ -259,8 +259,8 @@ Transform:
   m_GameObject: {fileID: 230183337}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6794057, y: -2.392369, z: 13.830165}
-  m_LocalScale: {x: 17.777323, y: 4.9504013, z: 1}
+  m_LocalPosition: {x: 4.6794057, y: -2.7993, z: 13.830165}
+  m_LocalScale: {x: 17.777323, y: 4.136555, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1267185630}
@@ -342,7 +342,7 @@ Transform:
   m_GameObject: {fileID: 438760112}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.28, y: 0.01, z: 14.041162}
+  m_LocalPosition: {x: 10.62, y: 0.01, z: 14.041162}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -736,8 +736,8 @@ Transform:
   m_GameObject: {fileID: 959808848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0434146, y: 2.614031, z: 13.830165}
-  m_LocalScale: {x: 4.3387628, y: 5.0575, z: 1}
+  m_LocalPosition: {x: -2.0434146, y: 2.2071, z: 13.830165}
+  m_LocalScale: {x: 4.3387628, y: 5.871382, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1267185630}
@@ -911,8 +911,8 @@ Transform:
   m_GameObject: {fileID: 1039520450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.419685, y: 2.614031, z: 13.830165}
-  m_LocalScale: {x: 4.3387628, y: 5.0575, z: 1}
+  m_LocalPosition: {x: 11.419685, y: 2.2071, z: 13.830165}
+  m_LocalScale: {x: 4.3387628, y: 5.8712516, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1267185630}
@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c75a78bb2555f4aa24b31462a7b02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  documento1: {fileID: 1379594028245495398, guid: 75d3a363bb3bc5c43a872d7d9633bb22, type: 3}
+  documento1: {fileID: 9202093749752719347, guid: bb851d6f62dad2142a60683b091dc8a8, type: 3}
   documento2: {fileID: 1705876210899925045, guid: 11221c456e701604f831d7d6f5b6a372, type: 3}
   documento3: {fileID: 487464104461456621, guid: e93a0e6be505bd040aae906a2895552b, type: 3}
   targetPosition1: {fileID: 1829507536}
@@ -1580,7 +1580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c41ed2e69411240bf1cb47be7b699e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npc1: {fileID: 8111748755929655707, guid: 51c8272e3d5706348823b5a913be7043, type: 3}
+  npc1: {fileID: 716417366792282045, guid: 1bd7d25767e2a6a48a4d518e13019a39, type: 3}
   npc2: {fileID: 6415896250417852792, guid: bb77d8947d7de1042bb7fb94f4e6bc62, type: 3}
   npc3: {fileID: 34524601205146011, guid: 1cf77b32b85fa0b44af85e1018f7593f, type: 3}
   npcOrdem: 1
