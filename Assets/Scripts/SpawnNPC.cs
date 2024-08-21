@@ -28,6 +28,8 @@ public class SpawnNPC : MonoBehaviour
 
     public Button advanceButton; //botão verde para avançar
     public Button returnButton; //botão vermelho para retornar
+    public GameObject botaoVerde;
+    public GameObject botaoVermelho;
 
     public delegate void EmDestino();
     public static event EmDestino ChegouEmDestino;
@@ -151,6 +153,8 @@ public class SpawnNPC : MonoBehaviour
     {
         advanceClicks++; //incrementa o contador de cliques
         if (advanceClicks == 2) //verifica se já houve 2 cliques
+        botaoVerde.SetActive(false);
+        botaoVermelho.SetActive(true);
         {
             NPCAdvance?.Invoke();
             MoveToAdvancePosition();
@@ -164,6 +168,8 @@ public class SpawnNPC : MonoBehaviour
     {
         returnClicks++; //incrementa o contador de cliques
         if (returnClicks == 2) //verifica se já houve 2 cliques
+        botaoVerde.SetActive(true);
+        botaoVermelho.SetActive(false);
         {
             NPCReturn?.Invoke();
             MoveToSpawnPosition();
@@ -196,5 +202,7 @@ public class SpawnNPC : MonoBehaviour
     {
         advanceButton.interactable = true; // Reativa o botão de avanço
         returnButton.interactable = true; // Reativa o botão de retorno
+        botaoVerde.SetActive(true);
+        botaoVermelho.SetActive(true);
     }
 }
