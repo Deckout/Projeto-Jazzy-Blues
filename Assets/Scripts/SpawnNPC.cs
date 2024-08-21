@@ -9,9 +9,18 @@ public class SpawnNPC : MonoBehaviour
     public GameObject npc1; //o npc1 que será spawnado
     public GameObject npc2;
     public GameObject npc3;
+    public GameObject npc4;
+    public GameObject npc5;
+    public GameObject npc6;
+    public GameObject npc7;
+    public GameObject npc8;
+    public GameObject npc9;
+    public GameObject npc10;
+    public GameObject npc11;
+    public GameObject npc12;
 
 
-    public int npcOrdem = 1; //a ordem dos npcs, começando pelo primeiro, aumenta em 1 sempre que o último é destruído
+    public static int npcOrdem = 1; //a ordem dos npcs, começando pelo primeiro, aumenta em 1 sempre que o último é destruído
     public Transform targetPosition; //posição até onde o objeto deve se mover inicialmente
     public Transform advancePosition; //posição mais adiante onde o npc irá se mover ao clicar no botão verde ou vermelho
     public float vel = 10f; //velocidade de movimento inicial
@@ -85,6 +94,42 @@ public class SpawnNPC : MonoBehaviour
     else if (npcOrdem == 3)
     {
         npcSpawnado = Instantiate(npc3, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 4)
+    {
+        npcSpawnado = Instantiate(npc4, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 5)
+    {
+        npcSpawnado = Instantiate(npc5, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 6)
+    {
+        npcSpawnado = Instantiate(npc6, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 7)
+    {
+        npcSpawnado = Instantiate(npc7, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 8)
+    {
+        npcSpawnado = Instantiate(npc8, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 9)
+    {
+        npcSpawnado = Instantiate(npc9, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 10)
+    {
+        npcSpawnado = Instantiate(npc10, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 11)
+    {
+        npcSpawnado = Instantiate(npc11, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 12)
+    {
+        npcSpawnado = Instantiate(npc12, transform.position, Quaternion.identity);
     }
 
     velAtual = vel;

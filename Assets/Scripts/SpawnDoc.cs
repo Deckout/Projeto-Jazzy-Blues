@@ -8,6 +8,16 @@ public class SpawnDoc : MonoBehaviour
     public GameObject documento1; // O documento a ser spawnado
     public GameObject documento2;
     public GameObject documento3;
+    public GameObject documento4;
+    public GameObject documento5;
+    public GameObject documento6;
+    public GameObject documento7;
+    public GameObject documento8;
+    public GameObject documento9;
+    public GameObject documento10;
+    public GameObject documento11;
+    public GameObject documento12;
+
     public Transform targetPosition1; // O objeto invisível que será o destino do movimento quando spawnado e será o ponto original
     public Transform targetPosition2; //ponto de despawn
     public float vel = 10f; // Velocidade inicial do movimento
@@ -58,6 +68,42 @@ public class SpawnDoc : MonoBehaviour
         else if(documentoOrdem == 3)
         {
             spawnedDoc = Instantiate(documento3, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 4)
+        {
+            spawnedDoc = Instantiate(documento4, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 5)
+        {
+            spawnedDoc = Instantiate(documento5, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 6)
+        {
+            spawnedDoc = Instantiate(documento6, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 7)
+        {
+            spawnedDoc = Instantiate(documento7, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 8)
+        {
+            spawnedDoc = Instantiate(documento8, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 9)
+        {
+            spawnedDoc = Instantiate(documento9, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 10)
+        {
+            spawnedDoc = Instantiate(documento10, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 11)
+        {
+            spawnedDoc = Instantiate(documento11, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 12)
+        {
+            spawnedDoc = Instantiate(documento12, transform.position, Quaternion.identity);
         }
         
         deveDestruir = false;
