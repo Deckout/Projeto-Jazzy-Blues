@@ -153,9 +153,9 @@ public class SpawnNPC : MonoBehaviour
     {
         advanceClicks++; //incrementa o contador de cliques
         if (advanceClicks == 2) //verifica se já houve 2 cliques
-        botaoVerde.SetActive(false);
-        botaoVermelho.SetActive(true);
         {
+            botaoVerde.SetActive(false);
+            botaoVermelho.SetActive(true);
             NPCAdvance?.Invoke();
             MoveToAdvancePosition();
             advanceClicks = 0; //reseta o contador
@@ -168,9 +168,9 @@ public class SpawnNPC : MonoBehaviour
     {
         returnClicks++; //incrementa o contador de cliques
         if (returnClicks == 2) //verifica se já houve 2 cliques
-        botaoVerde.SetActive(true);
-        botaoVermelho.SetActive(false);
         {
+            botaoVerde.SetActive(true);
+            botaoVermelho.SetActive(false);
             NPCReturn?.Invoke();
             MoveToSpawnPosition();
             returnClicks = 0; //reseta o contador
