@@ -45,6 +45,8 @@ public class SpawnNPC : MonoBehaviour
 
     private int advanceClicks = 0; //contador de cliques para avançar
     private int returnClicks = 0; //contador de cliques para retornar
+    private AudioSource npcAudioSource; // Componente de áudio para o som de caminhada
+
 
     void Start()
     {
@@ -55,6 +57,11 @@ public class SpawnNPC : MonoBehaviour
     {
         if (emMovimento && npcSpawnado != null)
         {
+            // Inicia a reprodução do som de caminhada se não estiver tocando
+            if (!npcAudioSource.isPlaying)
+            {
+                npcAudioSource.Play(); // Toca o som de caminhada
+            }
             //calcula a direção para o destino
             Vector3 direction = (currentTarget.position - npcSpawnado.transform.position).normalized;
 
@@ -67,16 +74,20 @@ public class SpawnNPC : MonoBehaviour
             //verifica se o objeto chegou à posição alvo
             if (Vector3.Distance(npcSpawnado.transform.position, currentTarget.position) < 0.01f)
             {
-                emMovimento = false; //para o movimento
-                ChegouEmDestino?.Invoke(); //trigger de que o npc chegou ao destino
+                emMovimento = false; // Para o movimento
 
-                // Destrói o NPC ao chegar ao destino
+                // Para o som de caminhada
+                npcAudioSource.Stop(); // Interrompe o som de caminhada
+
+                ChegouEmDestino?.Invoke(); // Aciona o evento de chegada do NPC ao destino
+
+                // Destroi o NPC se for necessário ao chegar ao destino
                 if (deveDestruir)
                 {
-                    DespawnEvent?.Invoke();
-                    Destroy(npcSpawnado);
-                    npcOrdem++;
-                    NPCSpawn();
+                    DespawnEvent?.Invoke(); // Aciona o evento de despawn
+                    Destroy(npcSpawnado); // Destrói o NPC
+                    npcOrdem++; // Incrementa a ordem dos NPCs
+                    NPCSpawn(); // Spawna o próximo NPC
                     ResetButtons(); // Reseta os botões após a destruição do NPC
                 }
             }
@@ -133,6 +144,8 @@ public class SpawnNPC : MonoBehaviour
     {
         npcSpawnado = Instantiate(npc12, transform.position, Quaternion.identity);
     }
+
+      npcAudioSource = npcSpawnado.GetComponent<AudioSource>(); // Obtém o componente AudioSource do NPC
 
     velAtual = vel;
     emMovimento = true;
