@@ -18,6 +18,8 @@ public class SpawnNPC : MonoBehaviour
     public GameObject npc10;
     public GameObject npc11;
     public GameObject npc12;
+    public GameObject npc13;
+    public GameObject npc14;
 
 
     public static int npcOrdem = 1; //a ordem dos npcs, começando pelo primeiro, aumenta em 1 sempre que o último é destruído
@@ -144,6 +146,14 @@ public class SpawnNPC : MonoBehaviour
     {
         npcSpawnado = Instantiate(npc12, transform.position, Quaternion.identity);
     }
+    else if (npcOrdem == 13)
+    {
+        npcSpawnado = Instantiate(npc13, transform.position, Quaternion.identity);
+    }
+    else if (npcOrdem == 14)
+    {
+        npcSpawnado = Instantiate(npc14, transform.position, Quaternion.identity);
+    }
 
       npcAudioSource = npcSpawnado.GetComponent<AudioSource>(); // Obtém o componente AudioSource do NPC
 
@@ -173,6 +183,7 @@ public class SpawnNPC : MonoBehaviour
             MoveToAdvancePosition();
             advanceClicks = 0; //reseta o contador
             returnButton.interactable = false; // Desativa o botão de retorno
+            advanceButton.interactable = false;
         }
     }
 
@@ -188,6 +199,7 @@ public class SpawnNPC : MonoBehaviour
             MoveToSpawnPosition();
             returnClicks = 0; //reseta o contador
             advanceButton.interactable = false; // Desativa o botão de avanço
+            returnButton.interactable = false;
         }
     }
 

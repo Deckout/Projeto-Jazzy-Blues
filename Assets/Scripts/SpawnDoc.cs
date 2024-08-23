@@ -17,6 +17,8 @@ public class SpawnDoc : MonoBehaviour
     public GameObject documento10;
     public GameObject documento11;
     public GameObject documento12;
+    public GameObject documento13;
+    public GameObject documento14;
 
     public Transform targetPosition1; // O objeto invisível que será o destino do movimento quando spawnado e será o ponto original
     public Transform targetPosition2; //ponto de despawn
@@ -104,6 +106,14 @@ public class SpawnDoc : MonoBehaviour
         else if(documentoOrdem == 12)
         {
             spawnedDoc = Instantiate(documento12, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 13)
+        {
+            spawnedDoc = Instantiate(documento13, transform.position, Quaternion.identity);
+        }
+        else if(documentoOrdem == 14)
+        {
+            spawnedDoc = Instantiate(documento14, transform.position, Quaternion.identity);
         }
         
         deveDestruir = false;

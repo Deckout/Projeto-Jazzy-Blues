@@ -48,11 +48,13 @@ public class ButtonSoundManager : MonoBehaviour
     {
         // Coloque aqui a lógica de aceitação
         Debug.Log("Pessoa Aceita!");
+        Debug.Log(ChoiceManager.goodVal);
     }
 
     void RejectAction()
     {
         // Coloque aqui a lógica de rejeição
         Debug.Log("Pessoa Rejeitada!");
+        Debug.Log(ChoiceManager.goodVal);
     }
 }
