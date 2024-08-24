@@ -34,6 +34,11 @@ public class SpawnDoc : MonoBehaviour
     private float velAtual; 
     private Transform currentTarget;
 
+    void Start()
+    {
+        documentoOrdem = 1;
+    }
+
     void OnEnable()
     {
         SpawnNPC.ChegouEmDestino += SpawnDocument;

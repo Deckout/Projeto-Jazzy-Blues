@@ -2595,7 +2595,7 @@ MonoBehaviour:
   npc11: {fileID: 1800135252424828679, guid: 3e8ebf7c9213ead469b29e5c9d46076b, type: 3}
   npc12: {fileID: 7083148780272697156, guid: 00f379680f37af243b598830fbf8f87c, type: 3}
   npc13: {fileID: 7705015367194094936, guid: 1d8ce321f324bc04fbf75729076429d5, type: 3}
-  npc14: {fileID: 4478827304861762767, guid: 49c7d37c89a7b8a4ca9e423ef20ec2e5, type: 3}
+  npc14: {fileID: 560826159940193001, guid: 49c7d37c89a7b8a4ca9e423ef20ec2e5, type: 3}
   targetPosition: {fileID: 438760113}
   advancePosition: {fileID: 522913414}
   vel: 5

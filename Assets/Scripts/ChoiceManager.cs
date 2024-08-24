@@ -58,10 +58,10 @@ public class ChoiceManager : MonoBehaviour
             goodVal++;
         }
         else if(SpawnNPC.npcOrdem == 13){
-            goodVal++;
+            goodVal--;
         }
         else if(SpawnNPC.npcOrdem == 14){
-            goodVal++;
+            goodVal--;
         }
     }
 
@@ -103,10 +103,10 @@ public class ChoiceManager : MonoBehaviour
             goodVal--;
         }
         else if(SpawnNPC.npcOrdem == 13){
-            goodVal--;
+            goodVal++;
         }
         else if(SpawnNPC.npcOrdem == 14){
-            goodVal--;
+            goodVal++;
         }
     }
 }

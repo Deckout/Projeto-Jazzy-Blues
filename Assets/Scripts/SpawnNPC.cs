@@ -52,6 +52,7 @@ public class SpawnNPC : MonoBehaviour
 
     void Start()
     {
+        npcOrdem = 1;
         NPCSpawn();
     }
 
