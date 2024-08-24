@@ -17,12 +17,12 @@ public class EndingManager : MonoBehaviour
 
         if(ChoiceManager.goodVal >= 10){
             final.text = ("FINAL A");
-            pontos.text =("PONTUAÇÃO: " + pontuacao.ToString() + "/14");
+            pontos.text =("ACERTOS: " + pontuacao.ToString() + "/14");
 
         }
         else{
             final.text = ("FINAL B");
-            pontos.text = ("PONTUAÇÃO: " + pontuacao.ToString() + "/14");
+            pontos.text = ("ACERTOS: " + pontuacao.ToString() + "/14");
         }
     }
 }
