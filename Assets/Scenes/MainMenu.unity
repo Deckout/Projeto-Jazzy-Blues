@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,9 +157,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 681, y: -245}
-  m_SizeDelta: {x: 298.4355, y: 114.0362}
-  m_Pivot: {x: 0.49999997, y: 0.5}
+  m_AnchoredPosition: {x: 694, y: -170}
+  m_SizeDelta: {x: 237.5176, y: 112.1389}
+  m_Pivot: {x: 0.37937048, y: 0.9999999}
 --- !u!114 &25434517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,7 +423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 661.68, y: 123}
+  m_AnchoredPosition: {x: 714.00006, y: 145}
   m_SizeDelta: {x: 383.8354, y: 140.9092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373527472
@@ -929,8 +928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 201, y: 406}
-  m_SizeDelta: {x: 235.6316, y: 45.1404}
+  m_AnchoredPosition: {x: 153.24, y: 416.68854}
+  m_SizeDelta: {x: 206.4851, y: 39.5567}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &755516358
 CanvasRenderer:
@@ -1625,8 +1624,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 666.57, y: -56}
-  m_SizeDelta: {x: 374.0588, y: 137.3217}
+  m_AnchoredPosition: {x: 714, y: -49}
+  m_SizeDelta: {x: 362.27, y: 142.4353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760519289
 MonoBehaviour:
@@ -1866,12 +1865,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!82 &1847053407
 AudioSource:
   m_ObjectHideFlags: 0
